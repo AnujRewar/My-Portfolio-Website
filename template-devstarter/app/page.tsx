@@ -36,10 +36,7 @@ export default function Home() {
       description:
         "Lekh is a real-end collaborative note-taking and whiteboarding web application designed for seamless real-time synchronization, rich document editing, and visual ideation.\n",
       tags: ["React", "Tailwind CSS", " Spring-Security", "MySQL","Google OAuth2"," Netlify"," Railway"],
-      image:
-          process.env.NODE_ENV === "production"
-              ? "https://anujrewar.github.io/My-Portfolio-Website/p1.png"
-              : "/p1.png",
+      image:"/p1.png",
       link: "https://lekh-notes.netlify.app/",
       repo: "https://github.com/AnujRewar/Lekh-Note-Taking-App",
     },
@@ -48,10 +45,7 @@ export default function Home() {
       description:
         "Decentralized identity verification protocol. Smart contracts written in Solidity.",
       tags: ["Spring Boot", "Lombok", "Spring Data JPA"],
-      image:
-          process.env.NODE_ENV === "production"
-              ? "https://anujrewar.github.io/My-Portfolio-Website/project-placeholder-2.jpg"
-              : "/project-placeholder-2.jpg",
+      image:"/project-placeholder-2.jpg",
       link: "#",
       repo: "https://github.com/AnujRewar/Movie-Booking-System",
     },
@@ -60,10 +54,7 @@ export default function Home() {
       description:
         "Developed a secure backend expense management application using Spring Boot.",
       tags: ["Spring Boot", "MySQL", "Docker", " Swagger UI"],
-      image:
-          process.env.NODE_ENV === "production"
-              ? "https://anujrewar.github.io/My-Portfolio-Website/project-placeholder-3.jpg"
-              : "/project-placeholder-3.jpg",
+      image: "/project-placeholder-3.jpg",
       link: "",
       repo: "https://github.com/AnujRewar/Expense-Tracker",
     },
@@ -189,8 +180,13 @@ export default function Home() {
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <div className="relative w-[100vw] h-[100vh] bg-background overflow-hidden">
-            <div className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-[url('/My-Portfolio-Website/hero-bg.jpg')] before:absolute before:inset-0 before:bg-primary before:mix-blend-color-dodge dark:before:mix-blend-color" />          </div>
-          <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/50 to-background" />
+            <div
+                className="absolute inset-0 bg-cover bg-center bg-no-repeat before:absolute before:inset-0 before:bg-primary before:mix-blend-color-dodge dark:before:mix-blend-color"
+                style={{
+                  backgroundImage: `url(${assetPath("/hero-bg.jpg")})`,
+                }}
+            />          <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/50 to-background" />
+        </div>
         </div>
 
         <div className="relative z-10 grid md:grid-cols-2 gap-12 items-center">
