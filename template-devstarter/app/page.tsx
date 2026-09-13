@@ -34,7 +34,10 @@ export default function Home() {
       description:
         "Lekh is a real-end collaborative note-taking and whiteboarding web application designed for seamless real-time synchronization, rich document editing, and visual ideation.\n",
       tags: ["React", "Tailwind CSS", " Spring-Security", "MySQL","Google OAuth2"," Netlify"," Railway"],
-      image: "/p1.png",
+      image:
+          process.env.NODE_ENV === "production"
+              ? "https://anujrewar.github.io/My-Portfolio-Website/p1.png"
+              : "/p1.png",
       link: "https://lekh-notes.netlify.app/",
       repo: "https://github.com/AnujRewar/Lekh-Note-Taking-App",
     },
@@ -43,7 +46,10 @@ export default function Home() {
       description:
         "Decentralized identity verification protocol. Smart contracts written in Solidity.",
       tags: ["Spring Boot", "Lombok", "Spring Data JPA"],
-      image: "/project-placeholder-2.jpg",
+      image:
+          process.env.NODE_ENV === "production"
+              ? "https://anujrewar.github.io/My-Portfolio-Website/project-placeholder-2.jpg"
+              : "/project-placeholder-2.jpg",
       link: "#",
       repo: "https://github.com/AnujRewar/Movie-Booking-System",
     },
@@ -52,7 +58,10 @@ export default function Home() {
       description:
         "Developed a secure backend expense management application using Spring Boot.",
       tags: ["Spring Boot", "MySQL", "Docker", " Swagger UI"],
-      image: "/project-placeholder-3.jpg",
+      image:
+          process.env.NODE_ENV === "production"
+              ? "https://anujrewar.github.io/My-Portfolio-Website/project-placeholder-3.jpg"
+              : "/project-placeholder-3.jpg",
       link: "",
       repo: "https://github.com/AnujRewar/Expense-Tracker",
     },
