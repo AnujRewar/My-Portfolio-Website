@@ -28,6 +28,8 @@ import { cn } from "@/lib/utils";
 import { ProjectImage } from "@/components/project-image";
 
 export default function Home() {
+  const assetPath = (path: string) =>
+      `${process.env.NODE_ENV === "production" ? "/My-Portfolio-Website" : ""}${path}`;
   const projects = [
     {
       title: "Lekh",
@@ -170,7 +172,7 @@ export default function Home() {
           className="cursor-pointer font-mono text-xs border-primary/50 hover:bg-primary/10 hover:text-primary hover:border-primary"
         >
           <a
-          href="/Anuj_Rewar_Resume.pdf"
+          href={assetPath("/Anuj_Rewar_Resume.pdf")}
           target="_blank"
           rel="noopener noreferrer"
           >
